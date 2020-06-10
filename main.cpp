@@ -56,7 +56,7 @@ void Print()
     }
     std::cout << "\n\nLevel: " << level;
     std::cout << "\nScore: " << score;
-    std::cout << "\nTotal tail: " << totalTail;
+    std::cout << "\nSnake length: " << totalTail + 1;
 }
 
 void Input()
@@ -138,7 +138,7 @@ void Logic()
         score += 10;
         do{
             fruit.setPoint(rand() % width, rand() % height);
-        }while(fruit.getX() < 2 || fruit.getY() < 2);
+        }while(fruit.getX() < 3 || fruit.getX() == (width - 1)  || fruit.getY() < 3 || (fruit.getY() == height-1));
     }
 
 }
